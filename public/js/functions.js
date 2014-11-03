@@ -4,7 +4,6 @@
 
 	$doc.ready(function() {
 		// Set "active" link by pathname
-		console.log(window.location.pathname);
 		if(window.location.pathname === '/home'){
 			$('#home').addClass('active');
 		} else if (window.location.pathname === '/commercial'){
@@ -12,6 +11,13 @@
 		} else {
 			$('#residential').addClass('active');
 		}
+
+		// Scroll to contact form on click
+		$('#contact').click(function(){
+			$('html, body').animate({
+				scrollTop: $('.form-contact').offset().top - 225
+			}, 600);
+		});
 
 		//Fullscreener
 		$('.background img').fullscreener();
