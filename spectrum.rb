@@ -9,13 +9,13 @@ get '/' do
 end
 
 get '/home' do
-  erb :home
+  erb :home, layout: :application
 end
 
 get '/residential' do
-  erb :residential
+  erb :residential, layout: :application
 end
 
 get '/commercial' do
-  erb :commercial
+  erb :commercial, layout: :application
 end
