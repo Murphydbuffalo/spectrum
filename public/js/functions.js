@@ -3,6 +3,16 @@
 	var $doc = $(document);
 
 	$doc.ready(function() {
+		// Set "active" link by pathname
+		console.log(window.location.pathname);
+		if(window.location.pathname === '/home'){
+			$('#home').addClass('active');
+		} else if (window.location.pathname === '/commercial'){
+			$('#commercial').addClass('active');
+		} else {
+			$('#residential').addClass('active');
+		}
+
 		//Fullscreener
 		$('.background img').fullscreener();
 
