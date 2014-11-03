@@ -160,10 +160,10 @@ p { margin-bottom:38px; }
 .overlay p { display: table-cell; vertical-align: middle; }
 .feature:hover .overlay { opacity: 1; visibility: visible;  }
 
-.section-testimonilals { padding: 90px 0 0 0; }
-.section-testimonilals .section-head { text-align:center; }
-.section-testimonilals .section-head h2 { font-size:48px; font-weight:300; padding-bottom:64px; }
-.section-testimonilals .section-head h2 strong { color: #cc9b3c; }
+.section-testimonials { padding: 90px 0 0 0; }
+.section-testimonials .section-head { text-align:center; }
+.section-testimonials .section-head h2 { font-size:48px; font-weight:300; padding-bottom:64px; }
+.section-testimonials .section-head h2 strong { color: #cc9b3c; }
 
 .list-partners { text-align:center; padding: 50px 0; }
 .list-partners li { list-style:none; list-style-position: outside; display: inline-block; vertical-align: top; padding: 0 10px; vertical-align: middle; }
@@ -396,7 +396,7 @@ p { margin-bottom:38px; }
 	.form-contact.form.form-contact .form-row { padding-bottom:0; }
 	.form-contact.form .form-controls { padding: 0 0 15px 0; }
 
-	.section-testimonilals { padding-top:40px; }
+	.section-testimonials { padding-top:40px; }
 	.section .section-body .services { padding: 20px 0; }
 
 	.list-partners li { margin-bottom:15px; }
@@ -417,7 +417,7 @@ p { margin-bottom:38px; }
 	.section .section-head h2 { font-size:38px; padding-bottom:10px;  }
 
 	.section .section-body .services .service { width: 50%; margin-bottom:10px; }
-	.section-testimonilals .section-head h2 { font-size:40px; line-height:40px; padding-bottom:20px;  }
+	.section-testimonials .section-head h2 { font-size:40px; line-height:40px; padding-bottom:20px;  }
 	.testimonials .testimonial h3 { padding-bottom:10px; }
 	
 	.testimonials { display:block; padding-bottom:30px;  }
