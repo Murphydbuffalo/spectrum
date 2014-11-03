@@ -20,6 +20,19 @@
 			}, 600);
 		});
 
+		// Modals
+		$('.open-modal').click(function(event){
+			event.preventDefault();
+			$('.wrapper').css({ "pointer-events": "none"});
+			$('.modal').css({ display: "block", "pointer-events": "auto" });
+		});
+
+		$('.close-modal').click(function(event){
+			event.preventDefault();
+			$('.modal').css({ display: "none" });
+			$('.wrapper').css({ 'pointer-events': "auto"});
+		});
+
 		//Fullscreener
 		$('.background img').fullscreener();
 

@@ -95,7 +95,28 @@ p { margin-bottom:38px; }
 .fsr-element { position: absolute; }
 .fsr-hidden { display: none; }
 
+/* MODALS */
+.modal { display: none;
+         z-index: 1000;
+         box-shadow: 2px 2px 3px grey;
+         position: fixed; 
+         height: 45%;
+         width: 75%; 
+         top: 30%;
+         left: 12%;
+         background: rgba(0,0,0,0.6);
+         border-radius: 5px;
+         -webkit-border-radius: 5px;
+         -moz-border-radius: 5px; }
 
+.modal .form { position: relative;
+               height: 15%;
+               width: 75%;
+               top: 14%;
+               left: 14%; }
+
+.modal .close-modal { margin-top: 2%; 
+                      margin-left: 90%; }
 
 /*  HEADER */
 .logo { background: url(images/logo.png) no-repeat 0 0; width: 132px; height:94px; float:left; }

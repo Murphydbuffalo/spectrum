@@ -421,13 +421,66 @@
 
 				<div class="callout">
 					<p>
-						<a href="#" class="btn">Click Here</a>
+						<a href="#" class="btn open-modal">Click Here</a>
 					</p>
 			
 					<p>
 						To send us message or call to discuss your project
 					</p>
 				</div><!-- /.callout -->
+
+				<div class='modal'>
+					<div class="close-modal">
+						<a href="#"><img src="css/images/close_icon.png" height='32' width='32' alt="Close"></a>
+					</div>
+					<div class='form form-contact'>
+						<form action="/commercial" method="post">
+						<input name="form-type" type="hidden" value="contact-us" />
+						<div class="form-body clearfix">
+							<div class="form-col form-col-1of2">
+								<div class="form-row">
+									<div class="form-col form-col-1of2">
+										<div class="form-controls">
+											<input required type="text" class="field" placeholder="First Name" name="first_name" id="field-first-name" />
+										</div><!-- /.form-controls -->
+									</div><!-- /.form-col form-col-1of2 -->
+									
+									<div class="form-col form-col-1of2">
+										
+										<div class="form-controls">
+											<input required type="text" class="field" placeholder="Last Name" name="last_name" id="field-last-name" />
+										</div><!-- /.form-controls -->
+									</div><!-- /.form-col form-col-1of2 -->
+								</div><!-- /.form-row -->
+
+								<div class="form-row">
+									<div class="form-col form-col-1of2">
+										<div class="form-controls">
+											<input required type="email" class="field" placeholder="Email" name="email" id="field-email" />
+										</div><!-- /.form-controls -->
+									</div><!-- /.form-col form-col-1of2 -->
+									
+									<div class="form-col form-col-1of2">
+										<div class="form-controls">
+											<input type="text" class="field" placeholder="Phone (optional)" name="phone" id="field-phone" />
+										</div><!-- /.form-controls -->
+									</div><!-- /.form-col form-col-1of2 -->
+								</div><!-- /.form-row -->
+							</div><!-- /.form-col form-col-1of2 -->
+							
+							<div class="form-col form-col-1of2">
+								<div class="form-controls">
+									<textarea required cols="30" rows="10" class="textarea" placeholder="Message" name="message" id="field-message"></textarea>
+								</div><!-- /.form-controls -->
+							</div><!-- /.form-col form-col-1of2 -->
+						</div><!-- /.form-body -->
+						
+						<div class="form-actions">
+							<input type="submit" class="form-btn btn-secondary" value="Submit" />
+						</div><!-- /.form-actions -->
+					</form>
+					</div><!-- form-contact -->
+				</div><!-- /.modal -->
 				
 				<section class="section">
 					<div class="section-head">
