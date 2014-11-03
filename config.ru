@@ -1,0 +1,3 @@
+require './spectrum'
+
+run Spectrum
