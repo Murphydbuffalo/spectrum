@@ -74,14 +74,14 @@
 			</div><!-- /.background -->
 
 			<div class="shell">
-				<div class="section-head">
+				<div class="section-head" id='home-form'>
 					<h2><strong>Contact Us</strong> Today! </h2>
 
 					<p>Send Us a <strong>Message</strong></p>
 				</div><!-- /.section-head -->
 
 				<div class="section-body">
-					<div class="form form-contact">
+					<div class="form form-contact" data-sweet-alert=<%= params[:sweetalert] %>>
 						<form action="/home" method="post">
 							<input name="form-type" type="hidden" value="contact-us" />
 							<div class="form-body clearfix">
@@ -224,7 +224,7 @@
 							<h3>Laminate Installation – J. Johnson</h3>
 				
 							<blockquote>
-								<p>&ldquo; I am writing to thank you for sending Rodney and Jerry to work on our laminate flooring installation. What a nice couple of guys, they were professional, clearly know what they were doing and worked steadily throughout each day. We are 100% satisfied with our installation. &ldquo;</p>
+								<p>&ldquo; I am writing to thank you for sending Rodney and Jerry to work on our laminate flooring installation. What a nice couple of guys, they were professional, clearly know what they were doing and worked steadily throughout each day. We are 100% satisfied with our installation. &rdquo;</p>
 							</blockquote>
 						</li><!-- /.testimonial -->
 						
@@ -232,7 +232,7 @@
 							<h3>Carpet Installation - J. Pettie</h3>
 				
 							<blockquote>
-								<p>&ldquo; Your crew just completed our carpet installation and did an outstanding job. It was a pleasure having them in our home&hellip;. All three guys were professional and easy to work with. We would be happy to recommend this crew and your company to future clients. &ldquo;</p>
+								<p>&ldquo; Your crew just completed our carpet installation and did an outstanding job. It was a pleasure having them in our home&hellip;. All three guys were professional and easy to work with. We would be happy to recommend this crew and your company to future clients. &rdquo;</p>
 							</blockquote>
 						</li><!-- /.testimonial -->
 						
@@ -240,7 +240,7 @@
 							<h3>Tile Backsplash – S. Carol</h3>
 				
 							<blockquote>
-								<p>&ldquo; Please pass along my thanks to Scott for outstanding job of installing my backsplash. It looks great and he completed the entire project in one day&hellip; we love it&hellip; &ldquo; </p>
+								<p>&ldquo; Please pass along my thanks to Scott for outstanding job of installing my backsplash. It looks great and he completed the entire project in one day&hellip; we love it&hellip; &rdquo; </p>
 							</blockquote>
 						</li><!-- /.testimonial -->
 					</ul><!-- /.testimonials -->
@@ -250,7 +250,7 @@
 							<h3>Carpet Installation – Powers</h3>
 				
 							<blockquote>
-								<p>&ldquo; Your carpet crew, Damon and Mike, did an awesome job.  They are very professional, and cleaned-up …  not only the rooms they worked in but the areas outside.  Thanks for sending them we would request them for any future work. &ldquo;</p>
+								<p>&ldquo; Your carpet crew, Damon and Mike, did an awesome job.  They are very professional, and cleaned-up …  not only the rooms they worked in but the areas outside.  Thanks for sending them we would request them for any future work. &rdquo;</p>
 							</blockquote>
 						</li><!-- /.testimonial -->
 						
@@ -258,7 +258,7 @@
 							<h3>Vinyl Installation - DeBenit</h3>
 				
 							<blockquote>
-								<p>&ldquo; Jeremy completed our vinyl floor installation yesterday and he couldn’t have done a nicer job.  We love it.  What a nice young man.  Thanks! &ldquo;</p>
+								<p>&ldquo; Jeremy completed our vinyl floor installation yesterday and he couldn’t have done a nicer job.  We love it.  What a nice young man.  Thanks! &rdquo;</p>
 							</blockquote>
 						</li><!-- /.testimonial -->
 						
@@ -266,7 +266,7 @@
 							<h3>Laminate Installation – Trosler</h3>
 				
 							<blockquote>
-								<p>&ldquo; Outstanding Team, Jerry is an absolute craftsman.  Unfortunately, most of our experience in Florida using outside contractors has not gone well.  This experience was just the opposite. Thanks!! &ldquo;</p>
+								<p>&ldquo; Outstanding Team, Jerry is an absolute craftsman.  Unfortunately, most of our experience in Florida using outside contractors has not gone well.  This experience was just the opposite. Thanks! &rdquo;</p>
 							</blockquote>
 						</li><!-- /.testimonial -->
 					</ul><!-- /.testimonials -->

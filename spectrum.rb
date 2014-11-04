@@ -63,11 +63,12 @@ post '/home' do
     @message = params[:message]
 
     send_mail('message', { name: @name, email: @email, phone: @phone, message: @message })
+
+    redirect '/home?sweetalert=true'
   else
     puts "First name, last name, email and message are required fields."
+    redirect '/home'
   end
-
-  redirect '/home'
 end
 
 get '/residential' do
@@ -82,11 +83,12 @@ post '/residential' do
     @message = params[:message]
 
     send_mail('message', { name: @name, email: @email, phone: @phone, message: @message })
+    
+    redirect '/residential?sweetalert=true'  
   else
     puts "First name, last name, email and message are required fields."
+    redirect '/residential'
   end
-
-  redirect '/residential'
 end
 
 get '/commercial' do
@@ -101,11 +103,12 @@ post '/commercial' do
     @message = params[:message]
 
     send_mail('message', { name: @name, email: @email, phone: @phone, message: @message })
+    
+    redirect '/commercial?sweetalert=true'
   else
     puts "First name, last name, email and message are required fields."
+    redirect '/commercial'
   end
-
-  redirect '/commercial'
 end
 
 post '/careers' do
@@ -116,9 +119,10 @@ post '/careers' do
     @company = params[:company]
 
     send_mail('career', { name: @name, email: @email, phone: @phone, company: @company })
+  
+    redirect '/commercial?sweetalert=true'
   else
     puts "All fields are required."
+    redirect '/commercial'
   end
-
-  redirect '/commercial'
 end

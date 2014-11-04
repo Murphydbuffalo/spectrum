@@ -43,6 +43,13 @@
 			$newTestimonials.fadeIn().css("display", "table").removeClass('hidden').addClass('shown');
 		});
 
+		// Sweet Alert
+		$win.load(function(){
+			if( $('.form-contact').data('sweet-alert') === true){
+				swal("Message sent!", "Your message was succesfully submitted.  Someone will be in touch with you shortly.", "success");
+			}
+		});
+
 		//Fullscreener
 		$('.background img').fullscreener();
 
