@@ -33,6 +33,16 @@
 			$('.wrapper').css({ 'pointer-events': "auto"});
 		});
 
+		// Show more testimonials
+		$('#toggle-testimonials').click(function(event){
+			event.preventDefault();
+			var $oldTestimonials = $('.shown.testimonials');
+			var $newTestimonials = $('.hidden.testimonials');
+
+			$oldTestimonials.css("display", "none").removeClass('shown').addClass('hidden');
+			$newTestimonials.fadeIn().css("display", "table").removeClass('hidden').addClass('shown');
+		});
+
 		//Fullscreener
 		$('.background img').fullscreener();
 
@@ -61,17 +71,17 @@
 			tableTitles();
 		});
 
-		$win.load(function() {
-			$('.slider-services .slider-clip').flexslider({
-				animation: "slide",
-				slideshow: false,
-				itemWidth: 283,
-				controlNav: false,
-				directionNav: false,
-				move:1,
-				itemMargin: 5
-			});
-		});
+		// $win.load(function() {
+		// 	$('.flexslider').flexslider({
+		// 		animation: "slide",
+		// 		slideshow: false,
+		// 		itemWidth: 390,
+		// 		controlNav: false,
+		// 		directionNav: false,
+		// 		move:1,
+		// 		itemMargin: 5
+		// 	});
+		// });
 
 		// MAP
 		function initialize() { 

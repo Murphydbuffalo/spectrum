@@ -61,7 +61,8 @@ td { padding: 0; }
 
 .alignleft { float: left; }
 .alignright { float: right; }
-.hidden { display: none; visibility: hidden; }
+.hidden,
+.hidden.testimonials { display: none; visibility: hidden; }
 
 .form-row:before,
 .form-row:after,
@@ -149,15 +150,15 @@ p { margin-bottom:38px; }
 .section .section-body .list-services { font-weight:700; padding-left:0;  }
 .list-services span { color: #cc9b3c; }
 
-.section .section-body .services { text-align:center; padding:50px 0 50px 0;  }
-.section .section-body .services .service { list-style:none; list-style-position: outside; float:left; width: 25%; box-sizing: border-box; padding: 0 5px; }
-.services .service img { width: 100%; }
+.section .section-body .services { text-align:center; padding:25px 0 5px 0;  }
+/*.section .section-body .services .service { list-style:none; list-style-position: outside; float:left; width: 25%; box-sizing: border-box; padding: 0 5px; }*/
+/*.services .service img { width: 100%; }*/
 
-.slider-services { padding-top:30px; }
-.section .section-body .slides { padding: 0; }
-.slider-services { position: relative; }
-.slider-services .slide { margin: 0 5px; }
-.slider-services .slide img { width: 100%; }
+.services { padding-top:30px; }
+.section .section-body .items { padding: 0; }
+.services { position: relative; }
+.services .slide { margin: 0 5px; width: 275px; display: inline-block; }
+.services .slide img { width: 100%; }
 
 .intro { padding: 100px 0; }
 .intro h1 { color: #fff; text-align:center; font-size:62px; line-height:60px; text-shadow: 2px 2px 10px rgba(0, 0, 0, 1); margin-bottom:25px; text-transform: uppercase; }
@@ -198,7 +199,7 @@ p { margin-bottom:38px; }
 .callout-secondary p { margin: 0; display: inline-block; vertical-align: top; line-height:50px; font-size:36px; font-weight:300; margin-right:20px; }
 .btn.btn-tertiary { background-color: #16581c; border-bottom-color: #031e05; min-width: 180px; vertical-align: middle; line-height:50px; font-size:18px; }
 
-.testimonials { display: table; width: 100%; table-layout: fixed; padding-bottom:70px; }
+.testimonials { display: table; width: 100%; table-layout: fixed; padding-bottom:70px; min-height: 275px; }
 .testimonials .testimonial { display: table-cell; vertical-align: top; list-style:none; list-style-position: outside; text-align:center; padding: 0 15px; table-layout: fixed; border-left:1px dashed #a0a0a0;  }
 .testimonials .testimonial:first-child { border-left:0; padding-left:0;  }
 .testimonials .testimonial blockquote { color: #666666; font-size:16px; line-height:30px; font-style: italic; }
