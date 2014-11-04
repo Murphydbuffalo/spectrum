@@ -120,8 +120,8 @@ p { margin-bottom:38px; }
                top: 14%;
                left: 14%; }
 
-.modal .close-modal { margin-top: -2%; 
-                      margin-left: 95%; }
+.modal .close-modal { margin-top: -3.5%; 
+                      margin-left: 94.5%; }
 
 /*  HEADER */
 .logo { background: url(images/logo.png) no-repeat 0 0; width: 132px; height:94px; float:left; }
