@@ -4,20 +4,32 @@ require 'pony'
 
 Dotenv.load
 
-def send_mail(name, email, phone, message)
-  body =
-    "Hi Mark,\n
-    \t New message from #{name}:  \n
-    \t #{message} \n
-    \t They can be reached via email at #{email} \n
-    \t #{phone}."
+def send_mail(template, options={})
+  if template == 'message'
+    body =
+      "Hi Mark,\n
+      \t New message from #{options[:name]}:  \n
+      \t #{options[:message]} \n
+      \t They can be reached via email at #{options[:email]} \n
+      \t #{options[:phone]}."
+
+    template = :message_email
+  else
+    body =
+      "Hi Mark,\n
+      \t #{options[:name]} from #{options[:company]} is interested in becoming a Spectrum subcontractor. \n
+      \t They can be reached via email at #{options[:email]} \n
+      \t #{options[:phone]}."
+
+    template = :career_email
+  end
 
   Pony.mail({
     to: 'murphydbuffalo@gmail.com',
     # to: 'mark@spectruminstallation.com',
     from: "Web-Services@spectruminstallation.com",
     subject: "New message!",
-    html_body: erb(:message_email),
+    html_body: erb(template),
     body: body,
     via: :smtp,
     via_options: {
@@ -47,10 +59,10 @@ post '/home' do
   if validate_presence_of(params[:first_name], params[:last_name], params[:email], params[:message])
     @name = "#{params[:first_name]} #{params[:last_name]}"
     @email = params[:email]
-    @phone = "And by phone at #{params[:phone]}."
+    @phone = "Or by phone at #{params[:phone]}."
     @message = params[:message]
 
-    send_mail(@name, @email, @phone, @message)
+    send_mail('message', { name: @name, email: @email, phone: @phone, message: @message })
   else
     puts "First name, last name, email and message are required fields."
   end
@@ -66,10 +78,10 @@ post '/residential' do
   if validate_presence_of(params[:first_name], params[:last_name], params[:email], params[:message])
     @name = "#{params[:first_name]} #{params[:last_name]}"
     @email = params[:email]
-    @phone = "And by phone at #{params[:phone]}."
+    @phone = "Or by phone at #{params[:phone]}."
     @message = params[:message]
 
-    send_mail(@name, @email, @phone, @message)
+    send_mail('message', { name: @name, email: @email, phone: @phone, message: @message })
   else
     puts "First name, last name, email and message are required fields."
   end
@@ -85,12 +97,27 @@ post '/commercial' do
   if validate_presence_of(params[:first_name], params[:last_name], params[:email], params[:message])
     @name = "#{params[:first_name]} #{params[:last_name]}"
     @email = params[:email]
-    @phone = "And by phone at #{params[:phone]}."
+    @phone = "Or by phone at #{params[:phone]}."
     @message = params[:message]
 
-    send_mail(@name, @email, @phone, @message)
+    send_mail('message', { name: @name, email: @email, phone: @phone, message: @message })
   else
     puts "First name, last name, email and message are required fields."
+  end
+
+  redirect '/commercial'
+end
+
+post '/careers' do
+  if validate_presence_of(params[:name], params[:company], params[:email], params[:phone])
+    @name = params[:name]
+    @email = params[:email]
+    @phone = "Or by phone at #{params[:phone]}."
+    @company = params[:company]
+
+    send_mail('career', { name: @name, email: @email, phone: @phone, company: @company })
+  else
+    puts "All fields are required."
   end
 
   redirect '/commercial'
