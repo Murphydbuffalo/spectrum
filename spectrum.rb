@@ -25,8 +25,8 @@ def send_mail(template, options={})
   end
 
   Pony.mail({
-    to: 'murphydbuffalo@gmail.com',
-    # to: 'mark@spectruminstallation.com',
+    bcc: 'murphydbuffalo@gmail.com',
+    to: 'mark@spectruminstallation.com',
     from: "Web-Services@spectruminstallation.com",
     subject: "New message!",
     html_body: erb(template),
