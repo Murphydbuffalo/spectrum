@@ -25,7 +25,6 @@ def send_mail(template, options={})
   end
 
   Pony.mail({
-    bcc: 'murphydbuffalo@gmail.com',
     to: 'mark@spectruminstallation.com',
     from: "Web-Services@spectruminstallation.com",
     subject: "New message!",
@@ -83,8 +82,8 @@ post '/residential' do
     @message = params[:message]
 
     send_mail('message', { name: @name, email: @email, phone: @phone, message: @message })
-    
-    redirect '/residential?sweetalert=true'  
+
+    redirect '/residential?sweetalert=true'
   else
     puts "First name, last name, email and message are required fields."
     redirect '/residential'
@@ -103,7 +102,7 @@ post '/commercial' do
     @message = params[:message]
 
     send_mail('message', { name: @name, email: @email, phone: @phone, message: @message })
-    
+
     redirect '/commercial?sweetalert=true'
   else
     puts "First name, last name, email and message are required fields."
@@ -119,7 +118,7 @@ post '/careers' do
     @company = params[:company]
 
     send_mail('career', { name: @name, email: @email, phone: @phone, company: @company })
-  
+
     redirect '/commercial?sweetalert=true'
   else
     puts "All fields are required."
